@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Bell, ArrowRight, Star, Clock, BookOpen, BrainCircuit } from 'lucide-react';
+import LiquidTransitionText from '../components/LiquidTransitionText';
 
 const ProductCard = ({ title, description, badge, icon, hasNotify, index }) => {
     const [email, setEmail] = useState('');
@@ -92,13 +93,15 @@ const Products = () => {
         }
     ];
 
+
+
     return (
         <div className="pt-32 min-h-screen bg-primary pb-20">
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <span className="text-accent font-semibold tracking-wider uppercase text-sm mb-4 block">Innovation Lab</span>
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                        Upcoming <span className="text-accent">Launches</span>
+                        <LiquidTransitionText text="Upcoming" /> <LiquidTransitionText text="Launches" className="text-accent" />
                     </h1>
                     <p className="text-lg text-slate-300 font-normal">
                         We are constantly building tools to solve real-world problems.

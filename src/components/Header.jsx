@@ -27,7 +27,6 @@ const Header = () => {
         { name: 'Products', path: '/products' },
         { name: 'About Us', path: '/about' },
         { name: 'Contact', path: '/contact' },
-        { name: 'Support', path: '/contact', special: true },
     ];
 
     const isActive = (path) => location.pathname === path;
@@ -58,15 +57,15 @@ const Header = () => {
                             <Link
                                 key={link.name}
                                 to={link.path}
-                                className={`text-sm font-medium transition-colors duration-200 relative group py-1 ${active ? 'text-accent' : 'text-slate-300 hover:text-accent'
-                                    } ${link.special && !active ? 'text-accent/90' : ''}`}
+                                className={`text-sm font-medium transition-colors duration-300 relative group py-1 ${active ? 'text-[#0066ff]' : 'text-slate-300 hover:text-[#0066ff]'
+                                    } ${link.special && !active ? 'text-[#0066ff]/90' : ''}`}
                             >
                                 {link.name}
                                 {/* Active & Hover Underline Effect */}
                                 <span
-                                    className={`absolute -bottom-1 left-0 right-0 h-0.5 rounded-full transition-all duration-200 ease-out ${active
-                                            ? 'bg-accent shadow-[0_0_8px_rgba(79,140,255,0.4)] opacity-100 scale-x-100'
-                                            : 'bg-accent/50 opacity-0 scale-x-50 group-hover:opacity-100 group-hover:scale-x-100'
+                                    className={`absolute -bottom-1 left-0 right-0 h-0.5 rounded-full transition-all duration-300 ease-out ${active
+                                        ? 'bg-[#0066ff] shadow-[0_0_8px_rgba(0,102,255,0.4)] opacity-100 scale-x-100'
+                                        : 'bg-[#0066ff]/50 opacity-0 scale-x-50 group-hover:opacity-100 group-hover:scale-x-100'
                                         }`}
                                 />
                             </Link>
@@ -74,7 +73,7 @@ const Header = () => {
                     })}
                     <Link
                         to="/contact"
-                        className="bg-accent text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 active:translate-y-0"
+                        className="bg-[#0066ff] text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 active:translate-y-0"
                     >
                         Get Free Consultation
                     </Link>
@@ -82,7 +81,7 @@ const Header = () => {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-white hover:text-accent transition-colors"
+                    className="md:hidden text-white hover:text-[#0066ff] transition-colors"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -106,8 +105,8 @@ const Header = () => {
                                         key={link.name}
                                         to={link.path}
                                         className={`text-base font-medium px-4 py-2 rounded-lg transition-colors ${active
-                                                ? 'bg-accent/10 text-accent'
-                                                : 'text-slate-300 hover:bg-white/5 hover:text-white'
+                                            ? 'bg-[#0066ff]/10 text-[#0066ff]'
+                                            : 'text-slate-300 hover:bg-white/5 hover:text-white'
                                             }`}
                                     >
                                         {link.name}
@@ -117,6 +116,7 @@ const Header = () => {
                             <div className="pt-2">
                                 <Link
                                     to="/contact"
+                                    onClick={() => setIsOpen(false)}
                                     className="block w-full bg-accent text-white px-5 py-3 rounded-lg text-center font-medium hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20"
                                 >
                                     Get Free Consultation

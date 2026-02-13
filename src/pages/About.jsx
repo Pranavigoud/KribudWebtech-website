@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Rocket, Users, Globe, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import LiquidTransitionText from '../components/LiquidTransitionText';
+import ContactSection from '../components/ContactSection';
 
 const About = () => {
     return (
@@ -15,7 +17,8 @@ const About = () => {
                     className="max-w-5xl mx-auto text-center"
                 >
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
-                        Empowering Businesses Through <span className="text-accent">Innovation</span>
+                        <LiquidTransitionText text="Empowering Businesses Through" /> <br className="hidden md:block" />
+                        <LiquidTransitionText text="Innovation" className="text-accent" />
                     </h1>
                 </motion.div>
             </div>
@@ -99,6 +102,8 @@ const About = () => {
                     </div>
                 </div>
             </div>
+
+            <ContactSection />
         </div>
     );
 };

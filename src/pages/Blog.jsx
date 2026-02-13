@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Calendar, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import LiquidTransitionText from '../components/LiquidTransitionText';
 
 const BlogPost = ({ title, category, date, excerpt, author, index }) => (
     <motion.article
@@ -64,7 +65,7 @@ const Blog = () => {
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                        Insights & <span className="text-accent">News</span>
+                        <LiquidTransitionText text="Insights &" /> <LiquidTransitionText text="News" className="text-accent" />
                     </h1>
                     <p className="text-lg text-slate-300 font-normal">
                         Latest updates, technology trends, and expert insights from the KriBud Webtech team.

@@ -2,16 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import LiquidTransitionText from './LiquidTransitionText';
 
 const Hero = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center bg-primary overflow-hidden pt-20">
-            {/* Background Elements - Subtle Professional Gradient */}
-            <div className="absolute inset-0 z-0">
-                <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-accent/10 rounded-full blur-[120px] opacity-40 animate-pulse"></div>
-                <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-indigo-900/20 rounded-full blur-[100px] opacity-30"></div>
-                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-5"></div>
-            </div>
+            {/* Background Elements - Moved to global Background component */}
 
             <div className="container mx-auto px-6 relative z-10 text-center">
                 <motion.div
@@ -29,10 +25,12 @@ const Hero = () => {
                     </motion.span>
 
                     <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
-                        It’s not just software. <br className="hidden md:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 brightness-110">
-                            It’s growth for your business.
-                        </span>
+                        <LiquidTransitionText text="It’s not just software." />
+                        <br className="hidden md:block" />
+                        <LiquidTransitionText
+                            text="It’s growth for your business."
+                            className="text-blue-500 brightness-110"
+                        />
                     </h1>
 
                     <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
@@ -43,10 +41,10 @@ const Hero = () => {
                     <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                         <Link
                             to="/contact"
-                            className="group bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/25 hover:-translate-y-1 flex items-center gap-2"
+                            className="bg-[#0066ff] text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-1 flex items-center justify-center gap-2 group"
                         >
                             Get Free Consultation
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link
                             to="/services"

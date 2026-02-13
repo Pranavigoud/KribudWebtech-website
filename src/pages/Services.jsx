@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Cloud, Code, TrendingUp, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import LiquidTransitionText from '../components/LiquidTransitionText';
 
 const ServiceGroup = ({ title, icon, services, color }) => (
     <div className="mb-24 last:mb-0">
@@ -21,26 +22,51 @@ const ServiceGroup = ({ title, icon, services, color }) => (
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     whileHover={{ y: -4 }}
-                    className="bg-surface p-10 rounded-2xl border border-white/5 shadow-sm hover:shadow-xl hover:border-accent/50 hover:bg-white/[0.07] transition-all duration-200 ease-out group relative overflow-hidden"
+                    className="bg-surface p-0 rounded-2xl border border-white/5 shadow-sm hover:shadow-xl hover:border-accent/50 hover:bg-white/[0.07] transition-all duration-200 ease-out group relative overflow-hidden flex flex-col"
                     tabIndex={0}
                 >
-                    <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <ArrowRight className="text-accent" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-4 group-hover:text-accent transition-colors">
-                        {service.title}
-                    </h3>
-                    <p className="text-slate-300 mb-6 leading-relaxed text-sm font-normal">
-                        {service.description}
-                    </p>
-                    <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-400 bg-white/5 p-2 px-3 rounded-lg border border-white/5">
-                        <span className="text-accent">Best For:</span> <span className="text-slate-200">{service.for}</span>
+                    {service.image && (
+                        <div className="w-full h-48 overflow-hidden relative">
+                            <motion.img
+                                src={service.image}
+                                alt={service.title}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                initial={{ opacity: 0, scale: 1.1 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.7 }}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+                        </div>
+                    )}
+
+                    <div className="p-10 flex-grow relative">
+                        <div className="absolute top-4 right-4 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <ArrowRight className="text-accent" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-4 group-hover:text-accent transition-colors">
+                            {service.title}
+                        </h3>
+                        <p className="text-slate-300 mb-6 leading-relaxed text-sm font-normal">
+                            {service.description}
+                        </p>
+                        <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-400 bg-white/5 p-2 px-3 rounded-lg border border-white/5 mt-auto">
+                            <span className="text-accent">Best For:</span> <span className="text-slate-200">{service.for}</span>
+                        </div>
                     </div>
                 </motion.div>
             ))}
         </div>
     </div>
 );
+
+import ServiceSalesforce from '../assets/service-salesforce.jpg';
+import ServiceCloudArch from '../assets/service-cloud-arch.jpg';
+import ServiceHosting from '../assets/service-hosting.jpg';
+import ServiceSupport from '../assets/service-support.jpg';
+import ServiceWebDev from '../assets/service-web-dev.jpg';
+import ServiceAppDev from '../assets/service-app-dev.jpg';
+import ServiceDigitalMarketing from '../assets/service-digital-marketing.jpg';
+import ServiceSocialMedia from '../assets/service-social-media.jpg';
 
 const Services = () => {
     const serviceGroups = [
@@ -52,22 +78,26 @@ const Services = () => {
                 {
                     title: "Salesforce Services",
                     description: "End-to-end Salesforce implementation and customization to streamline your customer relationships and sales pipelines.",
-                    for: "Enterprises & SMEs"
+                    for: "Enterprises & SMEs",
+                    image: ServiceSalesforce
                 },
                 {
                     title: "Cloud Architecture & Design",
                     description: "Scalable, secure cloud infrastructure design on AWS/Azure to reduce costs and improve performance coverage.",
-                    for: "Startups & Enterprises"
+                    for: "Startups & Enterprises",
+                    image: ServiceCloudArch
                 },
                 {
                     title: "Hosting & Migration",
                     description: "Seamless migration of legacy systems to the cloud with zero downtime and managed hosting solutions.",
-                    for: "Businesses scaling up"
+                    for: "Businesses scaling up",
+                    image: ServiceHosting
                 },
                 {
                     title: "Existing Application Support",
                     description: "24/7 maintenance, monitoring, and debugging for your critical business applications to ensure stability.",
-                    for: "Any Business"
+                    for: "Any Business",
+                    image: ServiceSupport
                 }
             ]
         },
@@ -79,12 +109,14 @@ const Services = () => {
                 {
                     title: "Web Development",
                     description: "High-performance, responsive websites and web apps built with modern frameworks like React and Next.js.",
-                    for: "Startups, SMEs, Enterprises"
+                    for: "Startups, SMEs, Enterprises",
+                    image: ServiceWebDev
                 },
                 {
                     title: "App Development",
                     description: "Native and cross-platform mobile applications (Flutter/React Native) that provide seamless user experiences.",
-                    for: "Startups & Consumer Brands"
+                    for: "Startups & Consumer Brands",
+                    image: ServiceAppDev
                 }
             ]
         },
@@ -96,12 +128,14 @@ const Services = () => {
                 {
                     title: "Digital Marketing",
                     description: "Data-driven SEO, PPC, and content strategies to increase your online visibility and drive qualified leads.",
-                    for: "Growth-focused Businesses"
+                    for: "Growth-focused Businesses",
+                    image: ServiceDigitalMarketing
                 },
                 {
                     title: "Social Media Handling",
                     description: "Strategic brand management and engagement across all major social platforms to build community.",
-                    for: "Brands & Influencers"
+                    for: "Brands & Influencers",
+                    image: ServiceSocialMedia
                 }
             ]
         }
@@ -112,7 +146,7 @@ const Services = () => {
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                        Services That Drive <span className="text-accent">Growth</span>
+                        <LiquidTransitionText text="Services That Drive" /> <LiquidTransitionText text="Growth" className="text-accent" />
                     </h1>
                     <p className="text-lg text-slate-300 font-normal">
                         From technical implementation to market expansion, we provide the full spectrum of digital solutions.
