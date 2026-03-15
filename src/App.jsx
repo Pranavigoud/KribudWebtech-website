@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Background from './components/Background';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 // Placeholder Pages
 import Home from './pages/Home';
@@ -18,6 +19,7 @@ import PageTransition from './components/PageTransition';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-primary font-sans text-slate-200 relative">
         <Background />
         <Header />

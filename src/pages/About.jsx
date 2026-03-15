@@ -7,7 +7,7 @@ import ContactSection from '../components/ContactSection';
 
 const About = () => {
     return (
-        <div className="pt-32 min-h-screen bg-primary pb-0">
+        <div className="pt-32 min-h-screen bg-primary pb-0 overflow-x-hidden max-w-full">
             {/* Header Section */}
             <div className="container mx-auto px-6 mb-24">
                 <motion.div
@@ -16,10 +16,10 @@ const About = () => {
                     transition={{ duration: 0.8 }}
                     className="max-w-5xl mx-auto text-center"
                 >
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
-                        <LiquidTransitionText text="Empowering Businesses Through" /> <br className="hidden md:block" />
-                        <LiquidTransitionText text="Innovation" className="text-accent" />
-                    </h1>
+                    <h3 className="text-3xl md:text-6xl font-bold text-white mb-8 leading-tight">
+                        <LiquidTransitionText text="Empowering Businesses " /> <br className="hidden md:block" />
+                        <LiquidTransitionText text="Through Innovation" className="text-accent" />
+                    </h3>
                 </motion.div>
             </div>
 

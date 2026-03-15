@@ -1,4 +1,6 @@
+
 import InteractiveGrid from './InteractiveGrid';
+import heroBg from '../assets/hero-bg.png';
 
 const Background = () => {
     return (
@@ -6,9 +8,10 @@ const Background = () => {
             {/* Base Background Image */}
             <div className="absolute inset-0 opacity-40">
                 <img
-                    src="/hero-bg.png"
-                    alt=""
+                    src={heroBg}
+                    alt="Hero background"
                     className="w-full h-full object-cover animate-pan-slow opacity-60"
+                    draggable="false"
                 />
             </div>
 

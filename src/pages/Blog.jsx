@@ -61,7 +61,7 @@ const Blog = () => {
     ];
 
     return (
-        <div className="pt-32 min-h-screen bg-primary pb-20">
+        <div className="pt-32 min-h-screen bg-primary pb-20 overflow-x-hidden max-w-full">
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

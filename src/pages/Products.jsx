@@ -96,7 +96,7 @@ const Products = () => {
 
 
     return (
-        <div className="pt-32 min-h-screen bg-primary pb-20">
+        <div className="pt-32 min-h-screen bg-primary pb-20 overflow-x-hidden max-w-full">
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <span className="text-accent font-semibold tracking-wider uppercase text-sm mb-4 block">Innovation Lab</span>

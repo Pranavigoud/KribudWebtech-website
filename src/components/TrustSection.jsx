@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 
 const TrustSection = () => {
     const techs = [
-        { name: 'Salesforce', icon: <Cloud className="w-6 h-6" /> },
-        { name: 'AWS', icon: <Server className="w-6 h-6" /> },
-        { name: 'Azure', icon: <Shield className="w-6 h-6" /> },
-        { name: 'React', icon: <Globe className="w-6 h-6" /> },
-        { name: 'Flutter', icon: <Smartphone className="w-6 h-6" /> },
+        { name: 'Salesforce', icon: <Cloud className="w-10 h-10 md:w-12 md:h-12" /> },
+        { name: 'AWS', icon: <Server className="w-10 h-10 md:w-12 md:h-12" /> },
+        { name: 'Azure', icon: <Shield className="w-10 h-10 md:w-12 md:h-12" /> },
+        { name: 'React', icon: <Globe className="w-10 h-10 md:w-12 md:h-12" /> },
+        { name: 'Flutter', icon: <Smartphone className="w-10 h-10 md:w-12 md:h-12" /> },
     ];
 
     return (

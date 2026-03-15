@@ -44,7 +44,7 @@ const Header = () => {
                     <img
                         src={logo}
                         alt="KriBud Webtech"
-                        className="w-14 h-14 object-contain rounded-lg transition-transform group-hover:scale-105"
+                        className="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-lg transition-transform group-hover:scale-105"
                     />
                     <span
                         className="font-bold font-sans text-white tracking-tight text-lg sm:text-xl"
@@ -103,7 +103,7 @@ const Header = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="absolute top-full left-0 right-0 bg-primary/95 backdrop-blur-xl border-t border-white/10 shadow-2xl md:hidden overflow-hidden"
+                        className="absolute top-full left-0 right-0 bg-primary backdrop-blur-xl border-t border-white/10 shadow-2xl md:hidden overflow-hidden" style={{backgroundColor: 'rgba(10,16,30,0.98)'}}
                     >
                         <div className="flex flex-col p-6 space-y-4">
                             {navLinks.map((link) => {

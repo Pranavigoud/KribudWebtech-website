@@ -25,57 +25,6 @@ const ContactSection = () => {
         <section id="contact" className="py-20 bg-primary relative">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto">
-                    {/* Contact Info */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                            <LiquidTransitionText text="Get in Touch" />
-                        </h2>
-                        <p className="text-slate-400 mb-10 text-lg font-light leading-relaxed">
-                            Have a project in mind? We'd love to hear from you. 
-                        </p>
-
-                        <div className="space-y-8">
-                            <div className="flex items-start gap-5 group">
-                                <div className="bg-surface p-4 rounded-xl text-accent border border-white/5 group-hover:border-accent/30 transition-colors">
-                                    <Mail size={24} />
-                                </div>
-                                <div>
-                                    <h3 className="font-semibold text-white text-lg mb-1">Email Us</h3>
-                                    <p className="text-slate-400">admin@kribudwebtech.com</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-5 group">
-                                <div className="bg-surface p-4 rounded-xl text-accent border border-white/5 group-hover:border-accent/30 transition-colors">
-                                    <Phone size={24} />
-                                </div>
-                                <div>
-                                    <h3 className="font-semibold text-white text-lg mb-1">Call Us</h3>
-                                    <p className="text-slate-400">+91 7780133244</p>
-                                    <p className="text-slate-400">+44 7769 044665</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-5 group">
-                                <div className="bg-surface p-4 rounded-xl text-accent border border-white/5 group-hover:border-accent/30 transition-colors">
-                                    <MapPin size={24} />
-                                </div>
-                                <div>
-                                    <h3 className="font-semibold text-white text-lg mb-1">Visit Us</h3>
-                                    <p className="text-slate-400 leading-relaxed">
-                                        Cambridge,UK
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                    </motion.div>
 
                     {/* Contact Form */}
                     <motion.div
@@ -144,6 +93,58 @@ const ContactSection = () => {
                                 <Send size={18} />
                             </button>
                         </form>
+                    </motion.div>
+
+                    {/* Contact Info */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                            <LiquidTransitionText text="Get in Touch" />
+                        </h2>
+                        <p className="text-slate-400 mb-10 text-lg font-light leading-relaxed">
+                            Have a project in mind? We'd love to hear from you. 
+                        </p>
+
+                        <div className="space-y-8">
+                            <div className="flex items-start gap-5 group">
+                                <div className="bg-surface p-4 rounded-xl text-accent border border-white/5 group-hover:border-accent/30 transition-colors">
+                                    <Mail size={24} />
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-white text-lg mb-1">Email Us</h3>
+                                    <p className="text-slate-400">admin@kribudwebtech.com</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-5 group">
+                                <div className="bg-surface p-4 rounded-xl text-accent border border-white/5 group-hover:border-accent/30 transition-colors">
+                                    <Phone size={24} />
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-white text-lg mb-1">Call Us</h3>
+                                    <p className="text-slate-400">+91 7780133244</p>
+                                    <p className="text-slate-400">+44 7769 044665</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-5 group">
+                                <div className="bg-surface p-4 rounded-xl text-accent border border-white/5 group-hover:border-accent/30 transition-colors">
+                                    <MapPin size={24} />
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-white text-lg mb-1">Visit Us</h3>
+                                    <p className="text-slate-400 leading-relaxed">
+                                        Cambridge,UK
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        
                     </motion.div>
                 </div>
             </div>
