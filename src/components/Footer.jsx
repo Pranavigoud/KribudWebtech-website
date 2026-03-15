@@ -47,7 +47,6 @@ const Footer = () => {
                             <li>Email: admin@kribudwebtech.com</li>
                             <li>Phone: +91 7780133244</li>
                             <li>Phone: +44 7769 044665</li>
-                            <li className="text-accent font-medium mt-2">24/7 Expert Support</li>
                         </ul>
                     </div>
                 </div>

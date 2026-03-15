@@ -95,7 +95,7 @@ const Services = () => {
                 },
                 {
                     title: "Existing Application Support",
-                    description: "24/7 maintenance, monitoring, and debugging for your critical business applications to ensure stability.",
+                    description: " maintenance, monitoring, and debugging for your critical business applications to ensure stability.",
                     for: "Any Business",
                     image: ServiceSupport
                 }

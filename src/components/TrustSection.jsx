@@ -48,7 +48,7 @@ const TrustSection = () => {
 
                 {/* Trust Stats / Features */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/10 pt-16">
-                    <motion.div
+                    {/* <motion.div
                         whileHover={{ y: -5 }}
                         className="text-center p-6 rounded-2xl transition-all duration-300 hover:bg-accent group cursor-default"
                     >
@@ -59,7 +59,7 @@ const TrustSection = () => {
                         <p className="text-slate-300 leading-relaxed font-normal group-hover:text-blue-50">
                             Our expert team is always available to ensure your business never stops.
                         </p>
-                    </motion.div>
+                    </motion.div> */}
                     <motion.div
                         whileHover={{ y: -5 }}
                         className="text-center p-6 rounded-2xl transition-all duration-300 hover:bg-accent group cursor-default"

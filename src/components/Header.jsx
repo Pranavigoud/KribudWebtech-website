@@ -34,18 +34,25 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-primary/95 backdrop-blur-md border-b border-white/5 py-4 shadow-sm' : 'bg-transparent py-6'
-                }`}
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-primary/95 backdrop-blur-md border-b border-white/5 py-4 shadow-sm' : 'bg-primary py-6'}
+                `}
+            style={{backgroundColor: 'rgba(10,16,30,0.98)'}} // fallback for bg-primary
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
-                {/* Logo - LEFT aligned per instructions */}
+                {/* Logo and Company Name */}
                 <Link to="/" className="flex items-center gap-1 group">
                     <img
                         src={logo}
                         alt="KriBud Webtech"
                         className="w-14 h-14 object-contain rounded-lg transition-transform group-hover:scale-105"
                     />
-                    <span className="text-xl font-bold font-sans text-white tracking-tight hidden sm:block">
+                    <span
+                        className="font-bold font-sans text-white tracking-tight text-lg sm:text-xl"
+                        style={{
+                            // On mobile, show smaller text and keep inline with logo
+                            display: 'inline',
+                        }}
+                    >
                         KriBud <span className="text-accent">Webtech</span>
                     </span>
                 </Link>

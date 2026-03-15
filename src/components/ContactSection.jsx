@@ -36,7 +36,7 @@ const ContactSection = () => {
                             <LiquidTransitionText text="Get in Touch" />
                         </h2>
                         <p className="text-slate-400 mb-10 text-lg font-light leading-relaxed">
-                            Have a project in mind? We'd love to hear from you. Our team is available 24/7 to assist you.
+                            Have a project in mind? We'd love to hear from you. 
                         </p>
 
                         <div className="space-y-8">
@@ -46,8 +46,7 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-white text-lg mb-1">Email Us</h3>
-                                    <p className="text-slate-400">contact@kribud.com</p>
-                                    <p className="text-slate-400">support@kribud.com</p>
+                                    <p className="text-slate-400">admin@kribudwebtech.com</p>
                                 </div>
                             </div>
 
@@ -57,8 +56,8 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-white text-lg mb-1">Call Us</h3>
-                                    <p className="text-slate-400">+1 234 567 890</p>
-                                    <p className="text-sm text-accent font-medium mt-1">24/7 Support Line Available</p>
+                                    <p className="text-slate-400">+91 7780133244</p>
+                                    <p className="text-slate-400">+44 7769 044665</p>
                                 </div>
                             </div>
 
@@ -69,25 +68,13 @@ const ContactSection = () => {
                                 <div>
                                     <h3 className="font-semibold text-white text-lg mb-1">Visit Us</h3>
                                     <p className="text-slate-400 leading-relaxed">
-                                        123 Tech Park, Innovation Street<br />
-                                        Silicon Valley, CA 94025
+                                        Cambridge,UK
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <motion.div
-                            whileHover={{ y: -2 }}
-                            className="mt-12 bg-gradient-to-r from-accent/20 to-transparent p-6 rounded-xl border border-accent/20"
-                        >
-                            <div className="flex items-center gap-3 text-accent mb-2">
-                                <MessageSquare size={24} />
-                                <h3 className="font-bold text-lg">24/7 Priority Support</h3>
-                            </div>
-                            <p className="text-slate-400 text-sm">
-                                Existing client? Reach out to our dedicated support channel for immediate assistance.
-                            </p>
-                        </motion.div>
+                        
                     </motion.div>
 
                     {/* Contact Form */}

@@ -45,7 +45,7 @@ const About = () => {
                             </p>
                             <p>
                                 We believe that technology is not just about code—it's about creating value. Whether it's streamlining operations with Cloud architecture
-                                or launching a new digital product, our team of experts is with you every step of the way, supported by our 24/7 diversified service commitment.
+                                or launching a new digital product, our team of experts is with you every step of the way, supported by our diversified service commitment.
                             </p>
                         </div>
 
@@ -61,7 +61,7 @@ const About = () => {
                             { icon: <Code />, title: "Expert Development", desc: "Top-tier coding standards using React, Flutter, and Node.js." },
                             { icon: <Users />, title: "Client Focus", desc: "Tailored strategies for SMEs, Startups, and Enterprises." },
                             { icon: <Rocket />, title: "Rapid Delivery", desc: "Agile methodologies to get your product to market faster." },
-                            { icon: <Globe />, title: "Global Support", desc: "24/7 dedicated support team for seamless operations." }
+                            { icon: <Globe />, title: "Global Support", desc: "Dedicated support team for seamless operations." }
                         ].map((item, i) => (
                             <motion.div
                                 key={item.title}

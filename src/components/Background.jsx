@@ -7,7 +7,7 @@ const Background = () => {
             <div className="absolute inset-0 opacity-40">
                 <img
                     src="/src/assets/hero-bg.png"
-                    alt="Background"
+                    alt=""
                     className="w-full h-full object-cover animate-pan-slow opacity-60"
                 />
             </div>
