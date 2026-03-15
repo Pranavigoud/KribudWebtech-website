@@ -16,10 +16,10 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
 
-                    <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight tracking-tight break-words w-full">
+                    <h1 className="text-4xl xs:text-5xl sm:text-7xl md:text-9xl font-bold text-white mb-6 sm:mb-8 leading-tight tracking-tight break-words w-full">
                         <LiquidTransitionText text="It’s not just software." />
                         <br className="hidden md:block" />
-                                                <span className="block text-blue-500 brightness-110">
+                        <span className="block text-blue-500 brightness-110 text-4xl xs:text-5xl sm:text-7xl md:text-9xl font-extrabold">
                                                     <span className="inline sm:hidden">
                                                         It’s growth for your<br/>business.
                                                     </span>
