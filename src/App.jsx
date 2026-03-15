@@ -21,7 +21,8 @@ function App() {
       <div className="flex flex-col min-h-screen bg-primary font-sans text-slate-200 relative">
         <Background />
         <Header />
-        <main className="flex-grow">
+        {/* Add padding-top to main to prevent header overlap (height: 88px mobile, 96px+ desktop) */}
+        <main className="flex-grow pt-[88px] md:pt-[96px]">
           <AnimatedRoutes>
             <Route path="/" element={<PageTransition><Home /></PageTransition>} />
             <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
