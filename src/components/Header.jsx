@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../assets/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -38,11 +39,11 @@ const Header = () => {
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 {/* Logo - LEFT aligned per instructions */}
-                <Link to="/" className="flex items-center gap-2 group">
+                <Link to="/" className="flex items-center gap-1 group">
                     <img
-                        src="/logo.jpg"
+                        src={logo}
                         alt="KriBud Webtech"
-                        className="w-10 h-10 object-contain rounded-lg transition-transform group-hover:scale-105"
+                        className="w-14 h-14 object-contain rounded-lg transition-transform group-hover:scale-105"
                     />
                     <span className="text-xl font-bold font-sans text-white tracking-tight hidden sm:block">
                         KriBud <span className="text-accent">Webtech</span>

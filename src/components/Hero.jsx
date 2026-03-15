@@ -15,14 +15,6 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <motion.span
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3 }}
-                        className="inline-block py-1.5 px-4 rounded-full bg-surface border border-white/10 text-accent text-xs font-semibold uppercase tracking-wider mb-8"
-                    >
-                        24/7 Expert Support Available
-                    </motion.span>
 
                     <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
                         <LiquidTransitionText text="It’s not just software." />
